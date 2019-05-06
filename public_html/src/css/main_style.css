@@ -1,0 +1,651 @@
+html{
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	position: relative;
+	font-family: "Raleway",sans-serif;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.nUnder a{
+	text-decoration-style: none;
+	color: black;
+}
+
+.tableCentre{
+	background-color: #404040;
+	border-style:solid; 
+	border-color:#0f0f0a;
+	border-collapse: collapse; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#edit form{
+	opacity: 0.85;
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#edit form:hover{
+	opacity: 0.75;
+}
+
+
+.pagecenter{
+	background-position: center; 
+	width: 1000px;
+	margin: auto;
+
+
+}
+.banner{
+	z-index: 10;
+	background-color: #2d2d2d;
+	height: 80px;
+	width: 100%;
+	opacity: 0.95;
+	display: block;
+	position: fixed;
+	vertical-align: top;
+}
+
+
+p{
+	font-size: 20px;
+}
+
+
+
+.artone{
+
+	z-index: 6;
+	left: 150px;
+	margin-top: 20px;
+	width: 800px;
+	font-style: normal;
+	color: black;
+	position: relative;
+	display: block;
+	text-align: center;
+	background-color: white;
+	opacity: 0.97;
+}
+
+.artone #publish_date, #name_author, #note_final{
+	margin-right: 50%;
+}
+
+.artone #name_author a{
+	text-decoration: none; 
+	text-decoration-color: none;
+} 
+
+.listepoems{
+	z-index: 6;
+	padding-bottom:20px;
+	padding-top:20px;
+	color: black;
+	position: relative;
+	display: block;
+	text-align: center;
+}
+
+
+.artone ul{
+	background-color: white;
+	list-style: none;
+	z-index: 6;
+	margin: 0;
+	padding-bottom:20px;
+	padding-top:20px;
+	color: black;
+	position: relative;
+	display: block;
+}
+
+.artone ul li a{
+	color: black;
+	font-family: "Raleway",sans-serif;
+	text-decoration: none;
+	margin-left: -120px;
+}
+
+
+.artone .poem{
+	max-width: 800px;
+	padding: 5px;
+}
+
+.bande{
+	z-index: 0;
+	width: 100%;
+	background-color: white;
+	opacity: 0.85;
+	height: auto;
+
+}
+
+.bande2{
+	z-index: 0;
+	width: 100%;
+	left: 50px;
+	background-color: white;
+	opacity: 0.95;
+	height: auto;
+}
+
+
+.right{
+	display:inline-block;
+	top: -40px;
+	left: 200px;
+	float: left;
+	position: fixed;
+	z-index: 15;
+}
+
+
+
+.logo a img{
+	z-index: 15;
+	position: fixed;
+	margin:12px;
+}
+
+.logo a h3:hover{
+	opacity: 0.7;
+}
+
+
+.logo a img:hover{
+	opacity: 0.6;
+}
+
+
+.menu{
+	left: 35%;
+	z-index: 15;
+	position: fixed;
+	background-position: center; 
+	width: 1000px;
+	margin: auto;
+}
+
+.menu .title{
+	top: 70px;
+	z-index: 15;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	width: 120px;
+	position: relative;
+	padding-left: 40px;
+	transition: 0.2s;
+}
+
+
+
+.menu .title a{
+	float: right;
+    text-align: center;
+    display: inline-block;
+	height: 55px;
+	z-index: 15;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 24px;
+	font-family: "Raleway",sans-serif;
+	/* font-family: "Lobster Two", cursive;*/
+}
+
+.menu .title a button{
+	font-weight: bold;
+	color: #2d2d2d;
+	background-color: white;
+	border-radius: 10px;
+	height: 35px;
+}
+
+.menu .title a button:hover{
+	font-weight: bold;
+	color: white;
+	background-color: #2d2d2d; /* ~grey*/
+	opacity: 0.99;
+}
+
+.menu .title a:hover{
+	display: block;
+	opacity: 0.7;
+}
+
+.menu .sousmenu{
+	z-index: 11;
+	display: block;
+	position: absolute;
+	visibility: hidden;
+	height: 0;
+	top: 50px;
+	left: 45px;
+	border-left: -80px;
+	transform: scaleY(0);
+	transform-origin: 1% 0;
+	transition: transform 0.9s ease; /* defilement du solide noir */
+	background-color: #2d2d2d; /* ~grey*/
+	opacity: 0.7;
+	box-shadow: 0 2px 3px rgba(34,36,38,.15);
+	border: 1px solid rgba(34,36,38,.15);
+	border-radius: 0 0 10px 10px;
+}
+
+.menu .title:hover .sousmenu{
+	visibility: visible;
+	height: auto;
+	transform: scaleY(1);
+}
+
+
+.menu .sousmenu li{
+	
+    text-align: center;
+	padding: 0;
+	display: inline-block;
+	color: black;
+	float: left;
+	width: 130px;
+	margin-left: -40px;
+	padding: 5px;
+	transition: 0.1s;
+}
+
+.menu .sousmenu li a{
+   	display: block;
+	text-transform: none;
+	margin-right: 20%;
+	text-align: center;
+	color: white;
+	padding: 0 0 0 5px;
+	font-weight: normal;
+	font-size: 15px;
+	font-family: "Raleway",sans-serif;
+}
+
+.menu .sousmenu li:hover {
+	background-color: grey;
+	border-left: 2px solid white;
+}
+
+
+
+.slider{
+	float: left;
+	float: right;
+	width: 1920px;
+}
+
+
+.slider ul {
+	list-style: none;
+
+}
+.slider ul li{
+	z-index: 9;
+}
+
+.slider ul li img{
+	left: 25%;
+	width: 500px;
+	position: absolute;
+}
+
+#network{
+	border-left: 0;
+	display: block;
+	width: 100%;
+	height: 85px;
+	background-color: #2b2b2c;
+}
+
+#network ul{
+	display: block;
+	float: left;
+	left: 50%;
+	position: relative;
+}
+
+#network ul li{
+	margin-left: 20px;
+	float: left;
+	list-style-type: none;
+	position: relative;
+	left: -230px
+
+}
+
+#network ul li a img {
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+#network ul li a:hover img {
+  border-radius: 50%;  
+  -webkit-transform: rotate(360deg); /
+  transform: rotate(360deg);
+}
+
+#box1{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../media/img/i0.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+ #box2{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../media/img/i2.jpg);
+    display: table;
+    background-size: cover;
+   	background-attachment: fixed;
+        }
+#box3{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../media/img/i3.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
+h1.cite{
+    font-family: arial black;
+    font-size: 50px;
+    color:white;
+    margin: 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 200px;
+}
+h1{
+  font-family: arial black;    
+    font-size: 50px;
+	color:white;
+	margin: 0px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+footer{
+	position: absolute; 
+	bottom: 0;
+	left: 0; 
+	right: 0
+}
+
+footer h4{
+	margin: 0;
+	padding-top: 20px;
+	padding-right: 50%;
+	width: 100%;
+	height: 40px;
+	color: white;
+	background-color: black;
+	text-align: center;
+}
+
+
+
+.poem{
+	font-family: "Raleway",sans-serif;
+	font-size:14pt;
+}
+
+.linemore{
+	display: inline-block;
+
+}
+
+
+.linemore .imgmore{
+	display: inline-block;
+}
+
+.linemore .imgmore img{
+	padding: 20px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+.linemore .imgmore:hover img{
+	-webkit-transform: scale(1.25);
+	transform: scale(1.25);
+}
+
+.linemore .imgmore a{
+	text-decoration: none;
+	color:black;
+}
+
+.linemore .imgmore a .titlemore {
+	font-weight: bold;
+	font-family: "Raleway",sans-serif;
+	font-size: 14pt;
+}
+
+#form_login, #form_singup{
+	text-align: center;
+	padding-top: 50px;
+}
+
+#form_singup table{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#form_login form input, #form_singup form input{
+	background-color: lightgrey;
+ 	width: 250px;
+}
+
+#form_login form input:active{
+	border-color: #f5ba75;
+}
+
+#form_login label, #form_singup #inscrip{
+	font-family: "Lobster Two", cursive;
+	font-size:4em;
+	color:white;
+}
+
+#form_login #remember{
+	width:20px;
+	font-size: 18px;
+	font-family: "Raleway",sans-serif;
+}
+
+#form_login #cremember{
+	width:20px;
+}
+
+#form_login .error, #form_singup .error{
+	color: red;
+	background: white; 
+	opacity 0.7;
+}
+
+#form_login #forgot a{
+	color: lightgray;
+	text-decoration: none;
+}
+
+#form_login #forgot a:hover{
+	text-decoration: underline;
+}
+
+#upload_art{
+	width: 382px; 
+	height: 436px;
+}
+
+.tab_comment{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+
+.tab_comment td .comment_img{
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: 50px;
+	width: 80px;
+}
+
+.tab_comment td .comment_name{
+	text-align: center;
+	text-decoration: none;
+}
+
+.tab_comment td .comment_main{
+	text-align: left;
+	text-decoration: none;
+	margin: 10px;
+	border-style: groove;
+	border-color: #d9c3ab;
+	border-radius: 15px;
+}
+
+.tab_comment .comment_tr td a .liked{
+	color: red;
+}
+
+.tab_comment .comment_tr td a .not_liked{
+	color: blue;
+}
+
+.tab_comment .comment_tr:nth-child(2n+1){
+	background-color: lightgrey;
+}
+
+.tab_comment .comment_tr:nth-child(2n+2){
+	background-color: white;
+}
+
+
+.tab_comment tr form textarea:focus{
+	border-style: solid;
+	border-color: #d9c3ab;
+}
+
+
+textarea{
+	border-radius: 10px;
+	width: 471px; 
+	height: 91px;
+}
+
+
+
+@media only screen and (max-width: 746px){
+	.banner{
+		background-color: red;
+	}
+	.pagecenter{
+		width: 600px;
+		margin-left: -50px;
+	}
+
+	.logo h3 a{
+		left: -70px;
+	}
+
+	.menu .title{
+		left: -80px;
+
+	}
+
+	.artone{
+		width: 550px;
+	}
+
+	#reseaux li a img{
+		border-left: 20px;
+	}
+
+	.slider ul li img{
+		width: 300px;
+	}
+
+
+}  
+
+
+/*
+@media only screen and (max-width: 746px) and (min-width: 0px){
+	.banner{
+		height: 125px;
+	}
+
+	.pagecenter{
+		margin-left: -83px;
+		width: 100%;
+	}
+	
+	.logo h3{
+		left: 65px;
+	}
+
+	.menu{
+		top:5px;
+		left: 15px;
+	}
+	
+	.menu .title{
+		
+	}
+
+
+	
+	.artone{
+		
+	}
+	/*
+	.artone .h33{
+	margin-left: -180px;
+
+	}
+
+	.artone pre{
+		width: 500px;
+		margin-left: -10px;
+
+	}
+
+	#reseaux li a img{
+		border-left: 20px;
+	}
+
+	.slider ul li img{
+		width: 300px;
+	}  */
+
+
+}
